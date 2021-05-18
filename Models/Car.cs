@@ -6,7 +6,7 @@ namespace cs_gregslist.Models
     public class Car
     {
 
-        public Car(string make, string model, string description, int year, int price, string imgUrl)
+        public Car(string make, string model, string description, int year, float price, string imgUrl)
         {
             Id = Guid.NewGuid().ToString();
             Make = make;
@@ -33,7 +33,7 @@ namespace cs_gregslist.Models
 
         [Required]
         [Range(0, int.MaxValue)]
-        public int Price { get; set; }
+        public float Price { get; set; }
 
         public string ImgUrl { get; set; } = "http://www.fillmurray.com/250/250";
 

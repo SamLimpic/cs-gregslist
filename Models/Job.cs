@@ -6,7 +6,7 @@ namespace cs_gregslist.Models
     public class Job
     {
 
-        public Job(string company, string jobTitle, string description, int rate, int hours, string imgUrl)
+        public Job(string company, string jobTitle, string description, float rate, int hours, string imgUrl)
         {
             Id = Guid.NewGuid().ToString();
             Company = company;
@@ -29,7 +29,7 @@ namespace cs_gregslist.Models
 
         [Required]
         [Range(15, int.MaxValue)]
-        public int Rate { get; set; }
+        public float Rate { get; set; }
 
         [Required]
         [Range(10, int.MaxValue)]
