@@ -8,6 +8,8 @@ namespace cs_gregslist.Services
     public class JobsService
     {
         public IEnumerable<Job> GetAll()
+        // IEnumerable takes the place of any collection type (List, Array, etc...)
+
         {
             return FakeDB.Jobs;
             // This is the temporary placeholder before using a real DB

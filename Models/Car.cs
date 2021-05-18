@@ -6,9 +6,9 @@ namespace cs_gregslist.Models
     public class Car
     {
 
-        public Car(string id, string make, string model, string description, int year, int price, string imgUrl)
+        public Car(string make, string model, string description, int year, int price, string imgUrl)
         {
-            Id = id;
+            Id = Guid.NewGuid().ToString();
             Make = make;
             Model = model;
             Description = description;

@@ -6,9 +6,9 @@ namespace cs_gregslist.Models
     public class Job
     {
 
-        public Job(string id, string company, string jobTitle, string description, int rate, int hours, string imgUrl)
+        public Job(string company, string jobTitle, string description, int rate, int hours, string imgUrl)
         {
-            Id = id;
+            Id = Guid.NewGuid().ToString();
             Company = company;
             JobTitle = jobTitle;
             Description = description;

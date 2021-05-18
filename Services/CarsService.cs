@@ -8,6 +8,8 @@ namespace cs_gregslist.Services
     public class CarsService
     {
         public IEnumerable<Car> GetAll()
+        // IEnumerable takes the place of any collection type (List, Array, etc...)
+
         {
             return FakeDB.Cars;
             // This is the temporary placeholder before using a real DB

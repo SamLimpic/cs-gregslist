@@ -6,9 +6,9 @@ namespace cs_gregslist.Models
     public class House
     {
 
-        public House(string id, int bedrooms, int bathrooms, int levels, string description, int year, int price, string imgUrl)
+        public House(int bedrooms, int bathrooms, int levels, string description, int year, int price, string imgUrl)
         {
-            Id = id;
+            Id = Guid.NewGuid().ToString();
             Bedrooms = bedrooms;
             Bathrooms = bathrooms;
             Levels = levels;
