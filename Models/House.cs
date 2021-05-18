@@ -8,31 +8,41 @@ namespace cs_gregslist.Models
 
         public House(string id, int bedrooms, int bathrooms, int levels, string description, int year, int price, string imgUrl)
         {
-            this.Id = id;
-            this.Bedrooms = bedrooms;
-            this.Bathrooms = bathrooms;
-            this.Levels = levels;
-            this.Description = description;
-            this.Year = year;
-            this.Price = price;
-            this.ImgUrl = imgUrl;
+            Id = id;
+            Bedrooms = bedrooms;
+            Bathrooms = bathrooms;
+            Levels = levels;
+            Description = description;
+            Year = year;
+            Price = price;
+            ImgUrl = imgUrl;
         }
 
         public string Id { get; set; }
 
+        [Required]
+        [Range(1, int.MaxValue)]
         public int Bedrooms { get; set; }
 
+        [Required]
+        [Range(1, int.MaxValue)]
         public int Bathrooms { get; set; }
 
+        [Required]
+        [Range(1, int.MaxValue)]
         public int Levels { get; set; }
 
         public string Description { get; set; }
 
+        [Required]
+        [Range(1500, 2022)]
         public int Year { get; set; }
 
+        [Required]
+        [Range(0, int.MaxValue)]
         public int Price { get; set; }
 
-        public string ImgUrl { get; set; }
+        public string ImgUrl { get; set; } = "http://www.fillmurray.com/250/250";
 
 
 

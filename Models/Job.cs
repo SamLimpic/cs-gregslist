@@ -8,28 +8,34 @@ namespace cs_gregslist.Models
 
         public Job(string id, string company, string jobTitle, string description, int rate, int hours, string imgUrl)
         {
-            this.Id = id;
-            this.Company = company;
-            this.JobTitle = jobTitle;
-            this.Description = description;
-            this.Rate = rate;
-            this.Hours = hours;
-            this.ImgUrl = imgUrl;
+            Id = id;
+            Company = company;
+            JobTitle = jobTitle;
+            Description = description;
+            Rate = rate;
+            Hours = hours;
+            ImgUrl = imgUrl;
         }
 
         public string Id { get; set; }
 
+        [Required]
         public string Company { get; set; }
 
+        [Required]
         public string JobTitle { get; set; }
 
         public string Description { get; set; }
 
+        [Required]
+        [Range(15, int.MaxValue)]
         public int Rate { get; set; }
 
+        [Required]
+        [Range(10, int.MaxValue)]
         public int Hours { get; set; }
 
-        public string ImgUrl { get; set; }
+        public string ImgUrl { get; set; } = "http://www.fillmurray.com/250/250";
 
     }
 }
